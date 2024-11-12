@@ -1,0 +1,59 @@
+/* Basic Reset for the Body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6e7f92, #abb3c5); /* Smooth gradient background */
+    box-sizing: border-box;
+}
+
+/* Tic-Tac-Toe Grid Styling */
+.tic-tac-toe {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-rows: repeat(3, 1fr);    /* 3 equal rows */
+    gap: 5px;                              /* Space between buttons */
+    width: 75vw;                           /* 75% of the viewport width */
+    height: 75vh;                          /* 75% of the viewport height */
+    max-width: 75vw;                       /* Ensures grid fills 75% of the screen width */
+    max-height: 75vh;                      /* Ensures grid fills 75% of the screen height */
+}
+
+/* Styling for Each Button (Cell) */
+.tic-tac-toe-btn {
+    background-color: #fff;
+    border: none;
+    border-radius: 30px; /* More rounded corners */
+    font-size: 6em; /* Larger text for better visibility */
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width of the grid cell */
+    height: 100%; /* Full height of the grid cell */
+    outline: none;
+}
+
+/* Hover Effect for Buttons */
+.tic-tac-toe-btn:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05); /* Slightly increase the size of the button on hover */
+}
+
+/* Active button style (when clicked) */
+.tic-tac-toe-btn:active {
+    transform: scale(0.98); /* Slightly shrink the button when clicked */
+}
+
+/* Disabled (Already clicked) button style */
+.tic-tac-toe-btn:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
